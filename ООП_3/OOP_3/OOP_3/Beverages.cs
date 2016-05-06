@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP_3
 {
-    class Beverages:food
+    public class Beverages:food
     {
         #region Drinks properties
 
@@ -14,14 +14,15 @@ namespace OOP_3
 
         public bool Aerated { get; set; }
 
+        public bool ReadyToEat { get; set; }
 
-
+        public string Alcohol { get; set; }
 
         #endregion 
 
         public override string PropertiesToString()
         {
-            return (ParentPropetiesToString() + TypeOfMeatProduct + '_' + FreshOrFreez + '_' + ReadyToEat + +'_' + Animal + ';');
+            return (ParentPropetiesToString() + TypeOfDrink + '_' + Aerated + '_' + ReadyToEat + +'_' + Alcohol + ';');
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP_3
 {
-    class Meat:food
+    public class Meat:food
     {
         #region Meat properties
         public string TypeOfMeatProduct { get; set; }

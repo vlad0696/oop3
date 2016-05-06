@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP_3
 {
-    class MilkFood :food
+    public class MilkFood :food
     {
         #region Milck properties
         public string TypeOfMilckProduct { get; set; }

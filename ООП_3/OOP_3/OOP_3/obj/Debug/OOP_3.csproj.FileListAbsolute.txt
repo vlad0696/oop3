@@ -1,1 +1,2 @@
 C:\Users\техно\Documents\GitHub\ООП_3\OOP_3\OOP_3\bin\Debug\OOP_3.exe.config
+C:\Users\техно\Documents\GitHub\oop3\ООП_3\OOP_3\OOP_3\bin\Debug\OOP_3.exe.config
