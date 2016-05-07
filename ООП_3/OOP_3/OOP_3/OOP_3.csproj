@@ -46,20 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Beverages.cs" />
-    <Compile Include="FlourProducts.cs" />
-    <Compile Include="food.cs" />
+    <Compile Include="Parent classes\AnimalProducts.cs" />
+    <Compile Include="Food classes\Beverages.cs" />
+    <Compile Include="Food classes\FlourProducts.cs" />
+    <Compile Include="Parent classes\food.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Grocery.cs" />
-    <Compile Include="Meat.cs" />
-    <Compile Include="MilkFood.cs" />
+    <Compile Include="Food classes\Grocery.cs" />
+    <Compile Include="Food classes\Meat.cs" />
+    <Compile Include="Food classes\MilkFood.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Parent classes\VegetableProducts.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

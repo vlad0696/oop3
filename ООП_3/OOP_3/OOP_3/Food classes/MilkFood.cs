@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP_3
 {
-    public class MilkFood :food
+    public class MilkFood :AnimalProducts
     {
         #region Milck properties
         public string TypeOfMilckProduct { get; set; }
@@ -14,13 +14,10 @@ namespace OOP_3
         public string Fatness { get; set; }
             
         public bool LactoseContent { get; set; }
-        
-        public string Animal { get; set; }
-                  
         #endregion
-        public override string PropertiesToString()
+        public string AddPropertiesToString()
         {
-            return (ParentPropetiesToString()+'_'+TypeOfMilckProduct+'_'+Fatness+'_'+LactoseContent+'_'+Animal+';');
+            return (PropertiesToString()+'_'+TypeOfMilckProduct+'_'+Fatness+'_'+LactoseContent+'_');
         }
     }
 }

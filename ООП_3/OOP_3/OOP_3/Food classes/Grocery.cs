@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace OOP_3
 {
-    public class Grocery:food
+    public class Grocery:VegetableProducts
     {
 
         public string TypeEat { get; set; }
 
         public string CerealVariety { get; set; }
 
-        public override string PropertiesToString()
+        public string AddPropertiesToString()
         {
-            return (ParentPropetiesToString() + '_' + TypeEat + '_'+CerealVariety + ';');
+            return (PropertiesToString() + '_' + TypeEat + '_'+CerealVariety+'_');
         }
     }
 }

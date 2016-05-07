@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP_3
 {
-    class FlourProducts:food
+    class FlourProducts:VegetableProducts
     {
         #region Flour Propeties
         public string TypeOfFlourproducts { get; set; }
@@ -18,9 +18,9 @@ namespace OOP_3
 
         #endregion
 
-        public override string PropertiesToString()
+        public string AddPropertiesToString()
         {
-            return (ParentPropetiesToString() +TypeOfFlourproducts + '_' + ContainsSugar + '_' + GradeFlour + ';');
+            return (PropertiesToString() +TypeOfFlourproducts + '_' + ContainsSugar + '_' + GradeFlour+'_');
         }
     }
 }

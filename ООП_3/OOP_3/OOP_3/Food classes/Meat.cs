@@ -6,21 +6,18 @@ using System.Threading.Tasks;
 
 namespace OOP_3
 {
-    public class Meat:food
+    public class Meat:AnimalProducts
     {
         #region Meat properties
         public string TypeOfMeatProduct { get; set; }
-        
-        public string Animal { get; set; }
             
         public bool FreshOrFreez { get; set; }
 
-        public bool ReadyToEat { get; set; }
         #endregion
 
-        public override string PropertiesToString()
+        public string AddPropertiesToString()
         {
-            return (ParentPropetiesToString() +TypeOfMeatProduct+'_' + FreshOrFreez + '_' + ReadyToEat + + '_' + Animal + ';');
+            return (PropertiesToString() +TypeOfMeatProduct+'_' + FreshOrFreez + '_');
         }
     }
 }

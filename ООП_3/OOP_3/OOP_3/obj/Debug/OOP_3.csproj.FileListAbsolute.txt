@@ -1,2 +1,10 @@
 C:\Users\техно\Documents\GitHub\ООП_3\OOP_3\OOP_3\bin\Debug\OOP_3.exe.config
 C:\Users\техно\Documents\GitHub\oop3\ООП_3\OOP_3\OOP_3\bin\Debug\OOP_3.exe.config
+C:\Users\техно\Documents\GitHub\oop3\ООП_3\OOP_3\OOP_3\bin\Debug\OOP_3.exe
+C:\Users\техно\Documents\GitHub\oop3\ООП_3\OOP_3\OOP_3\bin\Debug\OOP_3.pdb
+C:\Users\техно\Documents\GitHub\oop3\ООП_3\OOP_3\OOP_3\obj\Debug\OOP_3.csprojResolveAssemblyReference.cache
+C:\Users\техно\Documents\GitHub\oop3\ООП_3\OOP_3\OOP_3\obj\Debug\OOP_3.Form1.resources
+C:\Users\техно\Documents\GitHub\oop3\ООП_3\OOP_3\OOP_3\obj\Debug\OOP_3.Properties.Resources.resources
+C:\Users\техно\Documents\GitHub\oop3\ООП_3\OOP_3\OOP_3\obj\Debug\OOP_3.csproj.GenerateResource.Cache
+C:\Users\техно\Documents\GitHub\oop3\ООП_3\OOP_3\OOP_3\obj\Debug\OOP_3.exe
+C:\Users\техно\Documents\GitHub\oop3\ООП_3\OOP_3\OOP_3\obj\Debug\OOP_3.pdb

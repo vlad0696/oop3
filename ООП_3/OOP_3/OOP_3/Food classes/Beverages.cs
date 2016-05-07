@@ -15,14 +15,14 @@ namespace OOP_3
         public bool Aerated { get; set; }
 
         public bool ReadyToEat { get; set; }
-
-        public string Alcohol { get; set; }
+        
+        public bool Alcohol { get; set; }
 
         #endregion 
 
         public override string PropertiesToString()
         {
-            return (ParentPropetiesToString() + TypeOfDrink + '_' + Aerated + '_' + ReadyToEat + +'_' + Alcohol + ';');
+            return (ParentPropetiesToString() + TypeOfDrink + '_' + Aerated + '_' + ReadyToEat +'_');
         }
     }
 }
