@@ -15,9 +15,18 @@ namespace OOP_3
             
         public bool LactoseContent { get; set; }
         #endregion
+
         public string AddPropertiesToString()
         {
             return (PropertiesToString()+'_'+TypeOfMilckProduct+'_'+Fatness+'_'+LactoseContent+'_');
+        }
+    }
+
+    public class MilckFactory : FoodFactory
+    {
+        public food GetFood()
+        {
+            return new MilkFood();
         }
     }
 }

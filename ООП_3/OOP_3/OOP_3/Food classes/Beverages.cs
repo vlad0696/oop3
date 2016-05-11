@@ -24,5 +24,14 @@ namespace OOP_3
         {
             return (ParentPropetiesToString() + TypeOfDrink + '_' + Aerated + '_' + ReadyToEat +'_');
         }
+
+
+    }
+    public class BeveragesFactory : FoodFactory
+    {
+        public food GetFood()
+        {
+            return new Beverages();
+        }
     }
 }

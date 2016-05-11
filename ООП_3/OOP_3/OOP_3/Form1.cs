@@ -12,6 +12,8 @@ namespace OOP_3
 {
     public partial class Form1 : Form
     {
+        private Dictionary<string, FoodFactory> ListFoodFactory = new Dictionary<string, FoodFactory>();
+        public List<food> ListFood = new List<food>();
         public Form1()
         {
             InitializeComponent();
@@ -26,9 +28,13 @@ namespace OOP_3
             
         }
 
+        void CreateFoodElement(FoodFactory Factory)
+        {
+            ListFood.Add(Factory.GetFood());
+        }
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-
+            CreateFoodElement(ListFoodFactory[comboBoxMain.SelectedItem.ToString()]);
         }
 
         private void comboBoxMain_Click(object sender, EventArgs e)
@@ -83,6 +89,15 @@ namespace OOP_3
 
             }
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            ListFoodFactory.Add("Молочная продукция", new MilckFactory());
+            ListFoodFactory.Add("Мясные изделия", new MeatFactory());
+            ListFoodFactory.Add("Бакалея", new GroceryFactory());
+            ListFoodFactory.Add("Мучные продукты ", new FlourFactory());
+            ListFoodFactory.Add("Напитки", new BeveragesFactory());
         }
     }
 }

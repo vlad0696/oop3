@@ -20,4 +20,11 @@ namespace OOP_3
             return (PropertiesToString() +TypeOfMeatProduct+'_' + FreshOrFreez + '_');
         }
     }
+    public class MeatFactory : FoodFactory
+    {
+        public food GetFood()
+        {
+            return new Meat();
+        }
+    }
 }

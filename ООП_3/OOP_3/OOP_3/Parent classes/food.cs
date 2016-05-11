@@ -43,4 +43,9 @@ namespace OOP_3
         #endregion
 
     }
+
+    interface FoodFactory
+    {
+        food GetFood();
+    }
 }

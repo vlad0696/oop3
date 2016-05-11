@@ -23,4 +23,11 @@ namespace OOP_3
             return (PropertiesToString() +TypeOfFlourproducts + '_' + ContainsSugar + '_' + GradeFlour+'_');
         }
     }
+    public class FlourFactory : FoodFactory
+    {
+        public food GetFood()
+        {
+            return new FlourProducts();
+        }
+    }
 }
