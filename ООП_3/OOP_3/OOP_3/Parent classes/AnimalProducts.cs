@@ -17,7 +17,7 @@ namespace OOP_3
 
         public override string PropertiesToString()
         {
-            return (ParentPropetiesToString() + ReadyToEat + +'_' + Animal + '_');
+            return (ParentPropetiesToString() + ReadyToEat +'_' + Animal + '_');
         }
     }
 }

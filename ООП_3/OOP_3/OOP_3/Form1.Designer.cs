@@ -39,10 +39,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.AnimalProducts = new System.Windows.Forms.Panel();
-            this.comboBoxReadyToEat = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBoxAnimal = new System.Windows.Forms.TextBox();
             this.panelMilck = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -50,6 +46,10 @@
             this.comboBoxLactose = new System.Windows.Forms.ComboBox();
             this.textBoxFatness = new System.Windows.Forms.TextBox();
             this.textBoxTypeMilck = new System.Windows.Forms.TextBox();
+            this.comboBoxReadyToEat = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBoxAnimal = new System.Windows.Forms.TextBox();
             this.panelMeat = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -67,6 +67,7 @@
             this.comboBoxGaz = new System.Windows.Forms.ComboBox();
             this.comboBoxdrinkRady = new System.Windows.Forms.ComboBox();
             this.panelVegetableProducts = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
             this.panelFlour = new System.Windows.Forms.Panel();
             this.comboBoxSugar = new System.Windows.Forms.ComboBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -74,7 +75,6 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.textBoxTypeFlour = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.comboBoxGMO = new System.Windows.Forms.ComboBox();
             this.textBoxVitamins = new System.Windows.Forms.TextBox();
@@ -100,7 +100,8 @@
             "Мясные изделия",
             "Бакалея",
             "Мучные продукты ",
-            "Напитки"});
+            "Напитки",
+            "Консервы"});
             this.comboBoxMain.Location = new System.Drawing.Point(27, 21);
             this.comboBoxMain.Name = "comboBoxMain";
             this.comboBoxMain.Size = new System.Drawing.Size(179, 21);
@@ -173,52 +174,16 @@
             // 
             // AnimalProducts
             // 
+            this.AnimalProducts.Controls.Add(this.panelMilck);
             this.AnimalProducts.Controls.Add(this.comboBoxReadyToEat);
             this.AnimalProducts.Controls.Add(this.label6);
             this.AnimalProducts.Controls.Add(this.label5);
             this.AnimalProducts.Controls.Add(this.textBoxAnimal);
-            this.AnimalProducts.Controls.Add(this.panelMilck);
             this.AnimalProducts.Controls.Add(this.panelMeat);
-            this.AnimalProducts.Location = new System.Drawing.Point(231, 12);
+            this.AnimalProducts.Location = new System.Drawing.Point(227, 12);
             this.AnimalProducts.Name = "AnimalProducts";
-            this.AnimalProducts.Size = new System.Drawing.Size(232, 277);
+            this.AnimalProducts.Size = new System.Drawing.Size(232, 267);
             this.AnimalProducts.TabIndex = 9;
-            // 
-            // comboBoxReadyToEat
-            // 
-            this.comboBoxReadyToEat.FormattingEnabled = true;
-            this.comboBoxReadyToEat.Items.AddRange(new object[] {
-            "Да",
-            "Нет"});
-            this.comboBoxReadyToEat.Location = new System.Drawing.Point(3, 66);
-            this.comboBoxReadyToEat.Name = "comboBoxReadyToEat";
-            this.comboBoxReadyToEat.Size = new System.Drawing.Size(214, 21);
-            this.comboBoxReadyToEat.TabIndex = 4;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 50);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(167, 13);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Готовность к использованию:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(207, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Из какого животоного произведено:";
-            // 
-            // textBoxAnimal
-            // 
-            this.textBoxAnimal.Location = new System.Drawing.Point(3, 25);
-            this.textBoxAnimal.Name = "textBoxAnimal";
-            this.textBoxAnimal.Size = new System.Drawing.Size(214, 22);
-            this.textBoxAnimal.TabIndex = 0;
             // 
             // panelMilck
             // 
@@ -228,7 +193,7 @@
             this.panelMilck.Controls.Add(this.comboBoxLactose);
             this.panelMilck.Controls.Add(this.textBoxFatness);
             this.panelMilck.Controls.Add(this.textBoxTypeMilck);
-            this.panelMilck.Location = new System.Drawing.Point(1, 93);
+            this.panelMilck.Location = new System.Drawing.Point(3, 94);
             this.panelMilck.Name = "panelMilck";
             this.panelMilck.Size = new System.Drawing.Size(221, 159);
             this.panelMilck.TabIndex = 10;
@@ -285,13 +250,49 @@
             this.textBoxTypeMilck.Size = new System.Drawing.Size(214, 22);
             this.textBoxTypeMilck.TabIndex = 11;
             // 
+            // comboBoxReadyToEat
+            // 
+            this.comboBoxReadyToEat.FormattingEnabled = true;
+            this.comboBoxReadyToEat.Items.AddRange(new object[] {
+            "Да",
+            "Нет"});
+            this.comboBoxReadyToEat.Location = new System.Drawing.Point(3, 66);
+            this.comboBoxReadyToEat.Name = "comboBoxReadyToEat";
+            this.comboBoxReadyToEat.Size = new System.Drawing.Size(214, 21);
+            this.comboBoxReadyToEat.TabIndex = 4;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 50);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(167, 13);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Готовность к использованию:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(207, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Из какого животоного произведено:";
+            // 
+            // textBoxAnimal
+            // 
+            this.textBoxAnimal.Location = new System.Drawing.Point(3, 25);
+            this.textBoxAnimal.Name = "textBoxAnimal";
+            this.textBoxAnimal.Size = new System.Drawing.Size(214, 22);
+            this.textBoxAnimal.TabIndex = 0;
+            // 
             // panelMeat
             // 
             this.panelMeat.Controls.Add(this.label10);
             this.panelMeat.Controls.Add(this.label12);
             this.panelMeat.Controls.Add(this.comboBoxFreez);
             this.panelMeat.Controls.Add(this.textBoxMeatType);
-            this.panelMeat.Location = new System.Drawing.Point(-1, 93);
+            this.panelMeat.Location = new System.Drawing.Point(0, 93);
             this.panelMeat.Name = "panelMeat";
             this.panelMeat.Size = new System.Drawing.Size(221, 159);
             this.panelMeat.TabIndex = 15;
@@ -357,7 +358,7 @@
             this.panelDrinks.Controls.Add(this.comboBoxAlcohol);
             this.panelDrinks.Controls.Add(this.comboBoxGaz);
             this.panelDrinks.Controls.Add(this.comboBoxdrinkRady);
-            this.panelDrinks.Location = new System.Drawing.Point(230, 12);
+            this.panelDrinks.Location = new System.Drawing.Point(227, 12);
             this.panelDrinks.Name = "panelDrinks";
             this.panelDrinks.Size = new System.Drawing.Size(233, 277);
             this.panelDrinks.TabIndex = 17;
@@ -440,16 +441,25 @@
             // 
             // panelVegetableProducts
             // 
-            this.panelVegetableProducts.Controls.Add(this.panelFlour);
             this.panelVegetableProducts.Controls.Add(this.label17);
+            this.panelVegetableProducts.Controls.Add(this.panelFlour);
             this.panelVegetableProducts.Controls.Add(this.label16);
             this.panelVegetableProducts.Controls.Add(this.comboBoxGMO);
             this.panelVegetableProducts.Controls.Add(this.textBoxVitamins);
             this.panelVegetableProducts.Controls.Add(this.panelCereal);
-            this.panelVegetableProducts.Location = new System.Drawing.Point(233, 8);
+            this.panelVegetableProducts.Location = new System.Drawing.Point(227, 12);
             this.panelVegetableProducts.Name = "panelVegetableProducts";
-            this.panelVegetableProducts.Size = new System.Drawing.Size(233, 277);
+            this.panelVegetableProducts.Size = new System.Drawing.Size(233, 399);
             this.panelVegetableProducts.TabIndex = 18;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(3, 53);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(105, 13);
+            this.label17.TabIndex = 24;
+            this.label17.Text = "Содержание ГМО:";
             // 
             // panelFlour
             // 
@@ -459,7 +469,7 @@
             this.panelFlour.Controls.Add(this.label20);
             this.panelFlour.Controls.Add(this.label21);
             this.panelFlour.Controls.Add(this.textBoxTypeFlour);
-            this.panelFlour.Location = new System.Drawing.Point(0, 105);
+            this.panelFlour.Location = new System.Drawing.Point(0, 95);
             this.panelFlour.Name = "panelFlour";
             this.panelFlour.Size = new System.Drawing.Size(233, 169);
             this.panelFlour.TabIndex = 26;
@@ -516,15 +526,6 @@
             this.textBoxTypeFlour.Size = new System.Drawing.Size(214, 22);
             this.textBoxTypeFlour.TabIndex = 23;
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(3, 53);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(105, 13);
-            this.label17.TabIndex = 24;
-            this.label17.Text = "Содержание ГМО:";
-            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -558,7 +559,7 @@
             this.panelCereal.Controls.Add(this.label18);
             this.panelCereal.Controls.Add(this.label19);
             this.panelCereal.Controls.Add(this.textBoxTypeCereal);
-            this.panelCereal.Location = new System.Drawing.Point(0, 95);
+            this.panelCereal.Location = new System.Drawing.Point(0, 97);
             this.panelCereal.Name = "panelCereal";
             this.panelCereal.Size = new System.Drawing.Size(233, 137);
             this.panelCereal.TabIndex = 25;
@@ -599,7 +600,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(942, 442);
+            this.ClientSize = new System.Drawing.Size(766, 442);
             this.Controls.Add(this.panelDrinks);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.AnimalProducts);

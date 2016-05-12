@@ -9,6 +9,7 @@ namespace OOP_3
     public class Meat:AnimalProducts
     {
         #region Meat properties
+        public override string ClassName() { return "Мясные изделия"; }
         public string TypeOfMeatProduct { get; set; }
             
         public bool FreshOrFreez { get; set; }

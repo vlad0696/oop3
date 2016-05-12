@@ -8,6 +8,7 @@ namespace OOP_3
 {
     public class MilkFood :AnimalProducts
     {
+        public override string ClassName() { return "Молочная продукция"; }
         #region Milck properties
         public string TypeOfMilckProduct { get; set; }
 

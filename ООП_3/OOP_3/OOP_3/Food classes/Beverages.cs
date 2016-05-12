@@ -9,7 +9,7 @@ namespace OOP_3
     public class Beverages:food
     {
         #region Drinks properties
-
+        public override string ClassName() { return "Напитки"; }
         public string TypeOfDrink { get; set; }
 
         public bool Aerated { get; set; }

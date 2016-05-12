@@ -9,9 +9,10 @@ namespace OOP_3
     class FlourProducts:VegetableProducts
     {
         #region Flour Propeties
+        public override string ClassName() { return "Мучные продукты "; }
         public string TypeOfFlourproducts { get; set; }
 
-        public string ContainsSugar { get; set; }
+        public bool ContainsSugar { get; set; }
 
         public string GradeFlour { get; set; }
 

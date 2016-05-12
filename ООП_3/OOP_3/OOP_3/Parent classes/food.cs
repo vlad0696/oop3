@@ -12,30 +12,29 @@ namespace OOP_3
     {
 
         #region Properties parent class
+        public abstract string ClassName();
         public string TypeOfProduct { get; set; }
 
         public string Name { get; set; }
 
         public string Calorific { get; set; }
 
-        public int ShelfLife { get; set; }
+        public string ShelfLife { get; set; }
 
         public string ManufactureDate { get; set; }
-
-        public string StorageConditions { get; set; }
 
         #endregion
 
         #region Method parent class
         public string ParentPropetiesToString()
         {
-            return (TypeOfProduct+'_'+ Name+'_'+Calorific+'_'+ShelfLife+'_'+ManufactureDate+'_'+StorageConditions+'_');
+            return (TypeOfProduct+'_'+ Name+'_'+Calorific+'_'+ShelfLife+'_'+ManufactureDate+'_');
         }
         protected void SetProperties(string[] prop)
         {
             Name = prop[0];
             Calorific = prop[1];
-            ShelfLife = Convert.ToInt32(prop[2]);
+            ShelfLife = prop[2];
             ManufactureDate = prop[3];
         }
 

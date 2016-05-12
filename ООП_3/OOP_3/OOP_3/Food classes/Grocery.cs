@@ -9,6 +9,7 @@ namespace OOP_3
     public class Grocery:VegetableProducts
     {
         #region Grocery property
+        public override string ClassName() {return  "Бакалея"; }
         public string TypeEat { get; set; }
 
         public string CerealVariety { get; set; }
