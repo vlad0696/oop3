@@ -8,12 +8,21 @@ using System.Xml.Serialization;
 namespace OOP_3
 {
     [Serializable]
+    [XmlInclude(typeof(Beverages)), XmlInclude(typeof(Conserve)), XmlInclude(typeof(FlourProducts)), XmlInclude(typeof(Grocery)), XmlInclude(typeof(Meat)), XmlInclude(typeof(MilkFood))]
     public abstract class food
     {
-
+        protected bool IsItBool(string s)
+        {
+            if (s == "True")
+            {
+                return true;
+            }
+            return false;
+        }
         #region Properties parent class
         public abstract string ClassName();
- 
+
+        public abstract void SetProperties(string[] prop);
         public string Name { get; set; }
 
         public string Calorific { get; set; }
@@ -27,25 +36,22 @@ namespace OOP_3
         #endregion
 
         #region Method parent class
-        public string ParentPropetiesToString()
+        public abstract void SetIntemediate(string[] prop);
+       public void SetMainProperties(string[] prop)
         {
-            return ( Name+'_'+Calorific+'_'+ShelfLife+'_'+ManufactureDate+'_');
-        }
-        protected void SetProperties(string[] prop)
-        {
-            Name = prop[0];
-            Calorific = prop[1];
-            ShelfLife = prop[2];
-            ManufactureDate = prop[3];
+            Name = prop[1];
+            Calorific = prop[2];
+            ShelfLife = prop[3];
+            ManufactureDate = prop[4];
         }
 
-        public abstract string PropertiesToString();
         #endregion
 
     }
 
-    interface FoodFactory
+   public interface FoodFactory
     {
         food GetFood();
+
     }
 }

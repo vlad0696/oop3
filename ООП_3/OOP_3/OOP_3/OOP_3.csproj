@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Food classes\Conserve.cs" />
     <Compile Include="Parent classes\AnimalProducts.cs" />
     <Compile Include="Food classes\Beverages.cs" />
     <Compile Include="Food classes\FlourProducts.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Parent classes\VegetableProducts.cs" />
+    <Compile Include="Serialization.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

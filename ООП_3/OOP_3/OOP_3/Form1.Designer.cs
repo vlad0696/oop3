@@ -86,6 +86,24 @@
             this.comboBoxElements = new System.Windows.Forms.ComboBox();
             this.ChangeButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.buttonSerialization = new System.Windows.Forms.Button();
+            this.comboBoxSer = new System.Windows.Forms.ComboBox();
+            this.buttonDeSer = new System.Windows.Forms.Button();
+            this.buttonDel = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
             this.AnimalProducts.SuspendLayout();
             this.panelMilck.SuspendLayout();
             this.panelMeat.SuspendLayout();
@@ -134,7 +152,7 @@
             // 
             // textBoxDataManufacture
             // 
-            this.textBoxDataManufacture.Location = new System.Drawing.Point(23, 303);
+            this.textBoxDataManufacture.Location = new System.Drawing.Point(23, 310);
             this.textBoxDataManufacture.Name = "textBoxDataManufacture";
             this.textBoxDataManufacture.Size = new System.Drawing.Size(179, 22);
             this.textBoxDataManufacture.TabIndex = 4;
@@ -343,9 +361,9 @@
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(23, 351);
+            this.buttonAdd.Location = new System.Drawing.Point(23, 345);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd.Size = new System.Drawing.Size(179, 23);
             this.buttonAdd.TabIndex = 16;
             this.buttonAdd.Text = "Добавить";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -609,9 +627,9 @@
             // 
             // ChangeButton
             // 
-            this.ChangeButton.Location = new System.Drawing.Point(118, 351);
+            this.ChangeButton.Location = new System.Drawing.Point(23, 407);
             this.ChangeButton.Name = "ChangeButton";
-            this.ChangeButton.Size = new System.Drawing.Size(70, 23);
+            this.ChangeButton.Size = new System.Drawing.Size(179, 23);
             this.ChangeButton.TabIndex = 20;
             this.ChangeButton.Text = "Изменить выбранный";
             this.ChangeButton.UseVisualStyleBackColor = true;
@@ -627,11 +645,169 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.SelectedIndex);
             // 
+            // buttonSerialization
+            // 
+            this.buttonSerialization.Location = new System.Drawing.Point(227, 375);
+            this.buttonSerialization.Name = "buttonSerialization";
+            this.buttonSerialization.Size = new System.Drawing.Size(233, 23);
+            this.buttonSerialization.TabIndex = 22;
+            this.buttonSerialization.Text = "Сериализация";
+            this.buttonSerialization.UseVisualStyleBackColor = true;
+            this.buttonSerialization.Click += new System.EventHandler(this.buttonSerialization_Click);
+            // 
+            // comboBoxSer
+            // 
+            this.comboBoxSer.FormattingEnabled = true;
+            this.comboBoxSer.Items.AddRange(new object[] {
+            "XML",
+            "Бинарная",
+            "Текстовая"});
+            this.comboBoxSer.Location = new System.Drawing.Point(227, 345);
+            this.comboBoxSer.Name = "comboBoxSer";
+            this.comboBoxSer.Size = new System.Drawing.Size(233, 21);
+            this.comboBoxSer.TabIndex = 23;
+            // 
+            // buttonDeSer
+            // 
+            this.buttonDeSer.Location = new System.Drawing.Point(228, 409);
+            this.buttonDeSer.Name = "buttonDeSer";
+            this.buttonDeSer.Size = new System.Drawing.Size(231, 23);
+            this.buttonDeSer.TabIndex = 24;
+            this.buttonDeSer.Text = "Десериализация";
+            this.buttonDeSer.UseVisualStyleBackColor = true;
+            this.buttonDeSer.Click += new System.EventHandler(this.buttonDeSer_Click);
+            // 
+            // buttonDel
+            // 
+            this.buttonDel.Location = new System.Drawing.Point(23, 376);
+            this.buttonDel.Name = "buttonDel";
+            this.buttonDel.Size = new System.Drawing.Size(179, 23);
+            this.buttonDel.TabIndex = 25;
+            this.buttonDel.Text = "Удалить";
+            this.buttonDel.UseVisualStyleBackColor = true;
+            this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(527, 37);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(156, 22);
+            this.textBox1.TabIndex = 26;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(527, 62);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(156, 22);
+            this.textBox2.TabIndex = 27;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(527, 89);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(156, 22);
+            this.textBox3.TabIndex = 28;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(527, 117);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(156, 22);
+            this.textBox4.TabIndex = 29;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(527, 147);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(156, 22);
+            this.textBox5.TabIndex = 33;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(527, 182);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(156, 22);
+            this.textBox6.TabIndex = 32;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(527, 209);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(156, 22);
+            this.textBox7.TabIndex = 31;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(527, 237);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(156, 22);
+            this.textBox8.TabIndex = 30;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(527, 267);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(156, 22);
+            this.textBox9.TabIndex = 35;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(527, 295);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(156, 22);
+            this.textBox10.TabIndex = 34;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(527, 323);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(156, 22);
+            this.textBox11.TabIndex = 36;
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(527, 351);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(156, 22);
+            this.textBox12.TabIndex = 37;
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(527, 376);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(156, 22);
+            this.textBox13.TabIndex = 38;
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(527, 404);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(156, 22);
+            this.textBox14.TabIndex = 39;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(766, 442);
+            this.ClientSize = new System.Drawing.Size(746, 442);
+            this.Controls.Add(this.textBox14);
+            this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.buttonDel);
+            this.Controls.Add(this.buttonDeSer);
+            this.Controls.Add(this.comboBoxSer);
+            this.Controls.Add(this.buttonSerialization);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.ChangeButton);
             this.Controls.Add(this.comboBoxElements);
@@ -729,6 +905,24 @@
         private System.Windows.Forms.ComboBox comboBoxElements;
         private System.Windows.Forms.Button ChangeButton;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonSerialization;
+        private System.Windows.Forms.ComboBox comboBoxSer;
+        private System.Windows.Forms.Button buttonDeSer;
+        private System.Windows.Forms.Button buttonDel;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox textBox14;
     }
 }
 

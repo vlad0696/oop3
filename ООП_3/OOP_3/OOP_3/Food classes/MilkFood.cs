@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace OOP_3
 {
+    [Serializable]
     public class MilkFood :AnimalProducts
     {
         public override string ClassName() { return "Молочная продукция"; }
+
+      
         #region Milck properties
         public string TypeOfMilckProduct { get; set; }
 
@@ -16,11 +19,14 @@ namespace OOP_3
             
         public bool LactoseContent { get; set; }
         #endregion
-
-        public string AddPropertiesToString()
+        public override void SetProperties(string[] prop)
         {
-            return (PropertiesToString()+'_'+TypeOfMilckProduct+'_'+Fatness+'_'+LactoseContent+'_');
+            TypeOfMilckProduct = prop[7];
+            Fatness = prop[9];
+            LactoseContent = IsItBool(prop[8]);
+
         }
+
     }
 
     public class MilckFactory : FoodFactory

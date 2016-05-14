@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace OOP_3
 {
+    [Serializable]
     public  class FlourProducts:VegetableProducts
      {
         #region Flour Propeties
         public override string ClassName() { return "Мучные продукты "; }
+
         public string TypeOfFlourproducts { get; set; }
 
         public bool ContainsSugar { get; set; }
@@ -17,9 +19,16 @@ namespace OOP_3
         public string GradeFlour { get; set; }
 
 
+        public override void SetProperties(string[] prop)
+        {
+            TypeOfFlourproducts = prop[7];
+            GradeFlour = prop[8];
+            ContainsSugar  = IsItBool(prop[8]);
+
+        }
         #endregion
 
-     
+
     }
     public class FlourFactory : FoodFactory
     {

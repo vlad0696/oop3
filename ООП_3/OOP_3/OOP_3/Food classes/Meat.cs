@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP_3
 {
+    [Serializable]
     public class Meat:AnimalProducts
     {
         #region Meat properties
@@ -14,9 +15,15 @@ namespace OOP_3
             
         public bool FreshOrFreez { get; set; }
 
+        public override void SetProperties(string[] prop)
+        {
+            TypeOfMeatProduct = prop[7];
+            FreshOrFreez=IsItBool( prop[8]);
+
+        }
         #endregion
 
- 
+
     }
     public class MeatFactory : FoodFactory
     {

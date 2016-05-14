@@ -6,20 +6,29 @@ using System.Threading.Tasks;
 
 namespace OOP_3
 {
+    [Serializable]
     public class Conserve:food
     {
         public override string ClassName()
         {
             return "Консервы";
         }
+        
         public Meat MeatConserve = new Meat();
         public Grocery GroceryConserve = new Grocery();
-
-        public override string PropertiesToString()
+        public override void SetProperties(string[] prop)
         {
-            return (MeatConserve.PropertiesToString() + '&' + GroceryConserve.PropertiesToString());
+            MeatConserve.SetIntemediate(prop);
+            MeatConserve.SetProperties(prop);
+            GroceryConserve.SetIntemediate(prop);
+            GroceryConserve.SetProperties(prop);
         }
-                
+
+        public override void SetIntemediate(string[] prop)
+        {
+            throw new NotImplementedException();
+        }
+
     }
     public class ConserveFacotry : FoodFactory
     {

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP_3
 {
+    [Serializable]
     public abstract class AnimalProducts : food
     {
         #region Animal properties
@@ -13,11 +14,12 @@ namespace OOP_3
 
         public string Animal { get; set; }
 
+        public override void SetIntemediate(string[] prop)
+        {
+            ReadyToEat = IsItBool(prop[5]);
+            Animal=prop[6];
+        }
         #endregion
 
-        public override string PropertiesToString()
-        {
-            return (ParentPropetiesToString() + ReadyToEat +'_' + Animal + '_');
-        }
     }
 }

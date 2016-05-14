@@ -6,18 +6,20 @@ using System.Threading.Tasks;
 
 namespace OOP_3
 {
+    [Serializable]
     public abstract class VegetableProducts:food
     {
         #region Animal properties
         public bool WithGMO { get; set; }
 
         public string Vitamins { get; set; }
-        
+
         #endregion
 
-        public override string PropertiesToString()
+        public override void  SetIntemediate(string[] prop)
         {
-            return (ParentPropetiesToString() + Vitamins + +'_' + WithGMO + '_');
+            WithGMO = IsItBool(prop[6]);
+            Vitamins = prop[5];
         }
     }
 }
