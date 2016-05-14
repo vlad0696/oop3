@@ -83,6 +83,9 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.textBoxTypeCereal = new System.Windows.Forms.TextBox();
+            this.comboBoxElements = new System.Windows.Forms.ComboBox();
+            this.ChangeButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.AnimalProducts.SuspendLayout();
             this.panelMilck.SuspendLayout();
             this.panelMeat.SuspendLayout();
@@ -102,7 +105,7 @@
             "Мучные продукты ",
             "Напитки",
             "Консервы"});
-            this.comboBoxMain.Location = new System.Drawing.Point(27, 21);
+            this.comboBoxMain.Location = new System.Drawing.Point(23, 78);
             this.comboBoxMain.Name = "comboBoxMain";
             this.comboBoxMain.Size = new System.Drawing.Size(179, 21);
             this.comboBoxMain.TabIndex = 0;
@@ -110,28 +113,28 @@
             // 
             // textBoxProductName
             // 
-            this.textBoxProductName.Location = new System.Drawing.Point(27, 88);
+            this.textBoxProductName.Location = new System.Drawing.Point(23, 124);
             this.textBoxProductName.Name = "textBoxProductName";
             this.textBoxProductName.Size = new System.Drawing.Size(179, 22);
             this.textBoxProductName.TabIndex = 1;
             // 
             // textBoxCal
             // 
-            this.textBoxCal.Location = new System.Drawing.Point(27, 146);
+            this.textBoxCal.Location = new System.Drawing.Point(23, 182);
             this.textBoxCal.Name = "textBoxCal";
             this.textBoxCal.Size = new System.Drawing.Size(179, 22);
             this.textBoxCal.TabIndex = 2;
             // 
             // textBoxShelfLife
             // 
-            this.textBoxShelfLife.Location = new System.Drawing.Point(27, 206);
+            this.textBoxShelfLife.Location = new System.Drawing.Point(23, 242);
             this.textBoxShelfLife.Name = "textBoxShelfLife";
             this.textBoxShelfLife.Size = new System.Drawing.Size(179, 22);
             this.textBoxShelfLife.TabIndex = 3;
             // 
             // textBoxDataManufacture
             // 
-            this.textBoxDataManufacture.Location = new System.Drawing.Point(27, 267);
+            this.textBoxDataManufacture.Location = new System.Drawing.Point(23, 303);
             this.textBoxDataManufacture.Name = "textBoxDataManufacture";
             this.textBoxDataManufacture.Size = new System.Drawing.Size(179, 22);
             this.textBoxDataManufacture.TabIndex = 4;
@@ -139,7 +142,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 72);
+            this.label1.Location = new System.Drawing.Point(20, 108);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 13);
             this.label1.TabIndex = 5;
@@ -148,7 +151,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 130);
+            this.label2.Location = new System.Drawing.Point(20, 166);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 13);
             this.label2.TabIndex = 6;
@@ -157,7 +160,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 190);
+            this.label3.Location = new System.Drawing.Point(20, 226);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(130, 13);
             this.label3.TabIndex = 7;
@@ -166,7 +169,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 251);
+            this.label4.Location = new System.Drawing.Point(20, 287);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(112, 13);
             this.label4.TabIndex = 8;
@@ -340,7 +343,7 @@
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(27, 315);
+            this.buttonAdd.Location = new System.Drawing.Point(23, 351);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(75, 23);
             this.buttonAdd.TabIndex = 16;
@@ -449,7 +452,7 @@
             this.panelVegetableProducts.Controls.Add(this.panelCereal);
             this.panelVegetableProducts.Location = new System.Drawing.Point(227, 12);
             this.panelVegetableProducts.Name = "panelVegetableProducts";
-            this.panelVegetableProducts.Size = new System.Drawing.Size(233, 399);
+            this.panelVegetableProducts.Size = new System.Drawing.Size(233, 286);
             this.panelVegetableProducts.TabIndex = 18;
             // 
             // label17
@@ -596,11 +599,42 @@
             this.textBoxTypeCereal.Size = new System.Drawing.Size(214, 22);
             this.textBoxTypeCereal.TabIndex = 23;
             // 
+            // comboBoxElements
+            // 
+            this.comboBoxElements.FormattingEnabled = true;
+            this.comboBoxElements.Location = new System.Drawing.Point(23, 21);
+            this.comboBoxElements.Name = "comboBoxElements";
+            this.comboBoxElements.Size = new System.Drawing.Size(179, 21);
+            this.comboBoxElements.TabIndex = 19;
+            // 
+            // ChangeButton
+            // 
+            this.ChangeButton.Location = new System.Drawing.Point(118, 351);
+            this.ChangeButton.Name = "ChangeButton";
+            this.ChangeButton.Size = new System.Drawing.Size(70, 23);
+            this.ChangeButton.TabIndex = 20;
+            this.ChangeButton.Text = "Изменить выбранный";
+            this.ChangeButton.UseVisualStyleBackColor = true;
+            this.ChangeButton.Click += new System.EventHandler(this.ChangeButton_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(23, 48);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(179, 23);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Показать информацию";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.SelectedIndex);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(766, 442);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ChangeButton);
+            this.Controls.Add(this.comboBoxElements);
             this.Controls.Add(this.panelDrinks);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.AnimalProducts);
@@ -692,6 +726,9 @@
         private System.Windows.Forms.TextBox textBoxTypeFlour;
         private System.Windows.Forms.ComboBox comboBoxSugar;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.ComboBox comboBoxElements;
+        private System.Windows.Forms.Button ChangeButton;
+        private System.Windows.Forms.Button button1;
     }
 }
 

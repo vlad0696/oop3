@@ -15,10 +15,7 @@ namespace OOP_3
         public string CerealVariety { get; set; }
         #endregion
 
-        public string AddPropertiesToString()
-        {
-            return (PropertiesToString() + '_' + TypeEat + '_'+CerealVariety+'_');
-        }
+
     }
     public class GroceryFactory : FoodFactory
     {

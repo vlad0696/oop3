@@ -63,99 +63,129 @@ namespace OOP_3
                 return false;
         }
 
-        public Meat GetMeat()
+        #region Get Products
+
+        public Meat GetMeat(string Result)
         {
             Meat meat = new Meat();
             meat.Name = ListTextBox[0].Text;
             meat.Calorific = ListTextBox[1].Text;
             meat.ShelfLife = ListTextBox[2].Text;
             meat.ManufactureDate = ListTextBox[3].Text;
-            meat.ReadyToEat = GetComboBox(ListComboBox[2].SelectedItem);
-            meat.Animal = ListTextBox[4].Text;
-            meat.TypeOfMeatProduct = ListTextBox[10].Text;
-            meat.FreshOrFreez = GetComboBox(ListComboBox[3].SelectedItem);
+            Result=GetResultString(Result, (meat.ReadyToEat = GetComboBox(ListComboBox[2].SelectedItem)).ToString());
+            Result= GetResultString(Result, meat.Animal = ListTextBox[4].Text);
+            Result= GetResultString(Result, meat.TypeOfMeatProduct = ListTextBox[10].Text);
+            Result= GetResultString(Result, (meat.FreshOrFreez = GetComboBox(ListComboBox[3].SelectedItem)).ToString());
+            meat.StringProperty = Result;
             return meat;
         }
-        public  Grocery GetgGrocery()
+        public  Grocery GetgGrocery( string Result)
         {
             Grocery grocery = new Grocery();
             grocery.Name = ListTextBox[0].Text;
             grocery.Calorific = ListTextBox[1].Text;
             grocery.ShelfLife = ListTextBox[2].Text;
             grocery.ManufactureDate = ListTextBox[3].Text;
-            grocery.Vitamins = ListTextBox[5].Text;
-            grocery.WithGMO = GetComboBox(ListComboBox[0].SelectedItem);
-            grocery.TypeEat = ListTextBox[6].Text;
-            grocery.CerealVariety = ListTextBox[7].Text;
+            Result= GetResultString(Result,  grocery.Vitamins = ListTextBox[5].Text);
+            Result=GetResultString(Result, (grocery.WithGMO = GetComboBox(ListComboBox[0].SelectedItem)).ToString());
+            Result= GetResultString(Result, grocery.TypeEat = ListTextBox[6].Text);
+            Result= GetResultString(Result, grocery.CerealVariety = ListTextBox[7].Text);
+            grocery.StringProperty = Result;
             return grocery;
+        }
+        public MilkFood GetMilck(string result)
+        {
+            MilkFood milkFood = new MilkFood();
+            milkFood.Name = ListTextBox[0].Text;
+            milkFood.Calorific = ListTextBox[1].Text;
+            milkFood.ShelfLife = ListTextBox[2].Text;
+            milkFood.ManufactureDate = ListTextBox[3].Text;
+            result = GetResultString(result, (milkFood.ReadyToEat = GetComboBox(ListComboBox[2].SelectedItem)).ToString());
+            result = GetResultString(result, milkFood.Animal = ListTextBox[4].Text);
+            result = GetResultString(result, milkFood.TypeOfMilckProduct = ListTextBox[11].Text);
+            result = GetResultString(result, (milkFood.LactoseContent = GetComboBox(ListComboBox[4].SelectedItem)).ToString());
+            result = GetResultString(result, milkFood.Fatness = ListTextBox[12].Text);
+            milkFood.StringProperty = result;
+            return milkFood;
+        }
+        public FlourProducts GetFlour(string result)
+        {
+             FlourProducts flour = new FlourProducts();
+            flour.Name = ListTextBox[0].Text;
+            flour.Calorific = ListTextBox[1].Text;
+            flour.ShelfLife = ListTextBox[2].Text;
+            flour.ManufactureDate = ListTextBox[3].Text;
+            result = GetResultString(result, flour.Vitamins = ListTextBox[5].Text);
+            result = GetResultString(result, (flour.WithGMO = GetComboBox(ListComboBox[0].SelectedItem)).ToString());
+            result = GetResultString(result, flour.TypeOfFlourproducts = ListTextBox[8].Text);
+            result = GetResultString(result, (flour.ContainsSugar = GetComboBox(ListComboBox[1].SelectedItem)).ToString());
+            result = GetResultString(result, flour.GradeFlour = ListTextBox[9].Text);
+            flour.StringProperty = result;
+            return flour;
+        }
+        public Beverages GetBeverages(string result)
+        {
+            Beverages beverages = new Beverages();
+            beverages.Name = ListTextBox[0].Text;
+            beverages.Calorific = ListTextBox[1].Text;
+            beverages.ShelfLife = ListTextBox[2].Text;
+            beverages.ManufactureDate = ListTextBox[3].Text;
+            result = GetResultString(result, beverages.TypeOfDrink = ListTextBox[5].Text);
+            result = GetResultString(result, (beverages.ReadyToEat = GetComboBox(ListComboBox[5].SelectedItem)).ToString());
+            result = GetResultString(result, (beverages.Aerated = GetComboBox(ListComboBox[6].SelectedItem)).ToString());
+            result = GetResultString(result, (beverages.Alcohol = GetComboBox(ListComboBox[7].SelectedItem)).ToString());
+            beverages.StringProperty = result;
+            return beverages;
+        }
+        #endregion
+        public string GetResultString(string s,string addsting)
+        {
+            StringBuilder result = new StringBuilder();
+            result.Append(addsting+"_");
+            return s += result.ToString();
         }
         public food GetProperties(food CurrenFood)
         { 
             Conserve conserve = new Conserve();
-            
-            Beverages beverages = new Beverages();
-            
-            MilkFood milkFood = new MilkFood();
-            FlourProducts flour = new FlourProducts();
-            
-            
+            string result = "";
+            StringBuilder Resultstring = new StringBuilder();
+            Resultstring.Append(CurrenFood.ClassName()+"_");
+            for (int i=0;i<4; i++)
+            {
+                Resultstring.Append(ListTextBox[i].Text+"_");
+            }
+            result = Resultstring.ToString();
             switch (CurrenFood.ClassName())
             {
                 case ("Молочная продукция"):
                     {
-                        milkFood.Name = ListTextBox[0].Text;
-                        milkFood.Calorific = ListTextBox[1].Text;
-                        milkFood.ShelfLife = ListTextBox[2].Text;
-                        milkFood.ManufactureDate = ListTextBox[3].Text;
-                        milkFood.ReadyToEat = GetComboBox(ListComboBox[2].SelectedItem);
-                        milkFood.Animal = ListTextBox[4].Text;
-                        milkFood.TypeOfMilckProduct = ListTextBox[11].Text;
-                        milkFood.LactoseContent = GetComboBox(ListComboBox[4].SelectedItem);
-                        milkFood.Fatness = ListTextBox[12].Text;
-                        return milkFood;
+                        return GetMilck(result);                       
                     }
                 case "Мясные изделия":
                     {
-                        return GetMeat();
+                        return GetMeat(result);
                     }
                 case "Бакалея":
                     {
-                        return GetgGrocery();
+                        return GetgGrocery(result);
                     }
                 case "Напитки":
                     {
-                        beverages.Name = ListTextBox[0].Text;
-                        beverages.Calorific = ListTextBox[1].Text;
-                        beverages.ShelfLife = ListTextBox[2].Text;
-                        beverages.ManufactureDate = ListTextBox[3].Text;
-                        beverages.TypeOfDrink = ListTextBox[5].Text;
-                        beverages.ReadyToEat = GetComboBox(ListComboBox[0].SelectedItem);
-                        beverages.Aerated = GetComboBox(ListComboBox[0].SelectedItem);
-                        beverages.Alcohol= GetComboBox(ListComboBox[0].SelectedItem);
-                        return beverages;
+                        return GetBeverages(result);
                     }
                 case "Мучные продукты ":
                     {
-                        flour.Name = ListTextBox[0].Text;
-                        flour.Calorific = ListTextBox[1].Text;
-                        flour.ShelfLife = ListTextBox[2].Text;
-                        flour.ManufactureDate = ListTextBox[3].Text;
-                        flour.Vitamins = ListTextBox[5].Text;
-                        flour.WithGMO = GetComboBox(ListComboBox[0].SelectedItem);
-                        flour.TypeOfFlourproducts = ListTextBox[8].Text;
-                        flour.ContainsSugar = GetComboBox(ListComboBox[1].SelectedItem);
-                        flour.GradeFlour = ListTextBox[9].Text;
-                        return flour;
+                        return GetFlour(result);
                     }
                 case "Консервы":
                     {
-                        conserve.GroceryConserve = GetgGrocery();
-                        conserve.MeatConserve = GetMeat();
+                        conserve.GroceryConserve = GetgGrocery(result);
+                        conserve.MeatConserve = GetMeat(result);
                         return conserve;
                     }
                 default:
                     {
-                        return beverages;
+                        return conserve;
                     }
 
              }
@@ -164,7 +194,8 @@ namespace OOP_3
 
         void CreateFoodElement(FoodFactory Factory)
         {
-                           
+            
+
             ListFood.Add(GetProperties(Factory.GetFood()));
             foreach (TextBox tb in ListTextBox)
             {
@@ -174,6 +205,7 @@ namespace OOP_3
             {
                 cb.SelectedIndex = -1;
             }
+            comboBoxElements.Items.Add(ListFood[ListFood.Count - 1].Name);
         }
         private void buttonAdd_Click(object sender, EventArgs e)
         {
@@ -263,9 +295,41 @@ namespace OOP_3
             ListFoodFactory.Add("Консервы", new ConserveFacotry());           
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
 
+        private void SelectedIndex(object sender, EventArgs e)
+        {
+            
+            foreach (food f in ListFood)
+            {
+                if (f.Name== comboBoxElements.SelectedItem.ToString())
+                {
+                    StringBuilder prop = new StringBuilder();
+                    char symbol = '_';
+                    string[] properties = f.StringProperty.Split(symbol);
+                    for (int i = 0; i < properties.Length; i++)
+                        prop.Append(properties[i] + " ");
+                    MessageBox.Show(prop.ToString());
+                }
+
+            }
+            
+        }
+
+        private void ChangeButton_Click(object sender, EventArgs e)
+        {
+            
+            
+            for(int i = 0;i< ListFood.Count+1; i++ )
+            {
+                if (ListFood[i].Name == comboBoxElements.SelectedItem.ToString())
+                {
+                    string name = ListFood[i].Name;
+                    ListFood[i]=GetProperties(ListFood[i]);
+                    ListFood[i].Name = name;
+                }
+                i++;
+            }
+            comboBoxElements.SelectedIndex = -1;
         }
     }
 }

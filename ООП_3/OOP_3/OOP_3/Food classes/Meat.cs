@@ -16,10 +16,7 @@ namespace OOP_3
 
         #endregion
 
-        public string AddPropertiesToString()
-        {
-            return (PropertiesToString() +TypeOfMeatProduct+'_' + FreshOrFreez + '_');
-        }
+ 
     }
     public class MeatFactory : FoodFactory
     {
